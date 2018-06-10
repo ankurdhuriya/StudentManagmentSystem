@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorPrimary">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Student Management System"
+        android:textColor="@color/colorText"
+        android:gravity="center"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textStyle="bold"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+        android:id="@+id/txt_view1"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/layout_bg"
+        android:id="@+id/linear1"
+        android:layout_below="@id/txt_view1"
+        android:layout_margin="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:id="@+id/student_name"
+            android:layout_below="@id/txt_view1">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Student Name : "
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Name"
+                android:textSize="14sp"
+                android:id="@+id/edit_txt1"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:id="@+id/phone"
+            android:layout_below="@+id/student_name">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone number  : "
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Number"
+                android:textSize="14sp"
+                android:inputType="number"
+                android:id="@+id/edit_txt2"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:id="@+id/address"
+            android:layout_below="@+id/phone">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address  : "
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"/>
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Address"
+                android:textSize="14sp"
+                android:id="@+id/edit_txt3"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="12dp"
+            android:padding="5dp"
+            android:orientation="horizontal"
+            android:id="@+id/college"
+            android:layout_below="@+id/address">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="College  : "
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:layout_marginLeft="10dp"/>
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/simpleSpinner"></Spinner>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add"
+        android:layout_below="@+id/linear1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:layout_marginBottom="15dp"
+        android:text="Add Student"
+        android:fontFamily="casual"
+        android:textSize="14sp"
+        android:padding="5dp"
+        android:background="@drawable/round_button" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/display"
+        android:layout_below="@+id/add"
+        android:layout_centerHorizontal="true"
+        android:text="Display Students"
+        android:textSize="14sp"
+        android:fontFamily="casual"
+        android:padding="5dp"
+        android:background="@drawable/round_button"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/display">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txt_view2"
+            android:text="Students record are : "
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"/>
+
+    </ScrollView>
+
+</RelativeLayout>
